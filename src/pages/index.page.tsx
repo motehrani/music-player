@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react'
+import { SyntheticEvent, FC } from 'react'
 
 import data from '@src/pages/data'
 import { Nav } from '@src/shared/components/nav'
@@ -19,7 +20,7 @@ const Home = () => {
     duration: '',
     animationPercentage: 0,
   })
-  const timeUpdateHandler = e => {
+  const timeUpdateHandler = (e: SyntheticEvent<HTMLAudioElement, Event>) => {
     const current = e.target.currentTime
     const duration = e.target.duration
     //Calculate Percentage
@@ -65,14 +66,13 @@ const Home = () => {
         libraryStatus={libraryStatus}
       /> */}
       <Library />
-      {/* <audio
-        onTimeUpdate={timeUpdateHandler}
+      <audio
+        onTimeUpdate={evt => timeUpdateHandler}
         onLoadedMetadata={timeUpdateHandler}
         ref={audioRef}
         src={currentSong.audio}
         onEnded={songEndHandler}
-      ></audio> */}
-      <audio src=""></audio>
+      ></audio>
     </div>
   )
 }
