@@ -18,6 +18,7 @@ export const Song: FC<SongProps> = ({ currentSong }) => {
     <div className="song-container">
       <Image
         alt={currentSong.name}
+        // src={currentSong.cover}
         src="/img/cover.jpg"
         width={100}
         height={100}
