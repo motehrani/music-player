@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react'
-import { SyntheticEvent, FC } from 'react'
+import { SyntheticEvent } from 'react'
 
 import data from '@src/pages/data'
 import { Nav } from '@src/shared/components/nav'
@@ -67,7 +67,7 @@ const Home = () => {
       /> */}
       <Library />
       <audio
-        onTimeUpdate={evt => timeUpdateHandler}
+        onTimeUpdate={timeUpdateHandler}
         onLoadedMetadata={timeUpdateHandler}
         ref={audioRef}
         src={currentSong.audio}
