@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react'
 
-import data from 'public/api/data'
+import data from '@src/pages/data'
 import { Nav } from '@src/shared/components/nav'
 import { Song } from '@src/shared/components/song'
 import { Player } from '@src/shared/components/player'
