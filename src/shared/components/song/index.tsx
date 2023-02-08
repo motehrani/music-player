@@ -1,15 +1,29 @@
+import { FC } from 'react'
 import Image from 'next/image'
 
-// const Song = ({ currentSong }) => {
-export const Song = () => {
+interface SongProps {
+  currentSong: {
+    name: string
+    cover: string
+    artist: string
+    audio: string
+    color: string[]
+    id: string
+    active: boolean
+  }
+}
+
+export const Song: FC<SongProps> = ({ currentSong }) => {
   return (
     <div className="song-container">
-      {/* <img alt={currentSong.name} src={currentSong.cover}></img>
-      <h2>{currentSong.name} </h2>
-      <h3>{currentSong.artist} </h3> */}
-      <Image alt="name" src="/img/cover.jpg" width={100} height={100} />
-      <h2>name</h2>
-      <h3>artist </h3>
+      <Image
+        alt={currentSong.name}
+        src={currentSong.cover}
+        width={100}
+        height={100}
+      />
+      <h2>{currentSong.name}</h2>
+      <h3>{currentSong.artist}</h3>
     </div>
   )
 }

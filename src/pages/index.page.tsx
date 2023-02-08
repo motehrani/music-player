@@ -1,5 +1,4 @@
-import { useState, useRef } from 'react'
-import { SyntheticEvent } from 'react'
+import { useState, useRef, SyntheticEvent, FC } from 'react'
 
 import data from '@src/pages/data'
 import { Nav } from '@src/shared/components/nav'
@@ -9,20 +8,20 @@ import { Library } from '@src/shared/components/library'
 
 const Home = () => {
   // Ref
-  const audioRef = useRef(null)
+  const audioRef = useRef<HTMLAudioElement | null>(null)
   // state
   const [songs, setSongs] = useState(data())
   const [currentSong, setCurrentSong] = useState(songs[0])
   const [isPlaying, setIsPlaying] = useState(false)
   const [libraryStatus, setLibraryStatus] = useState(false)
   const [songInfo, setSongInfo] = useState({
-    currentTime: '',
-    duration: '',
+    currentTime: 0,
+    duration: 0,
     animationPercentage: 0,
   })
   const timeUpdateHandler = (e: SyntheticEvent<HTMLAudioElement, Event>) => {
-    const current = e.target.currentTime
-    const duration = e.target.duration
+    const current = e.currentTarget.currentTime
+    const duration = e.currentTarget.duration
     //Calculate Percentage
     const roundedCurrent = Math.round(current)
     const roundedDuration = Math.round(duration)
@@ -41,10 +40,8 @@ const Home = () => {
   }
   return (
     <div>
-      {/* <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} /> */}
-      <Nav />
-      {/* <Song currentSong={currentSong} /> */}
-      <Song />
+      <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
+      <Song currentSong={currentSong} />
       {/* <Player
         isPlaying={isPlaying}
         setIsPlaying={setIsPlaying}
