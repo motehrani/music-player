@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from 'uuid'
+
 function ChillHop() {
   return [
     {
@@ -7,7 +9,7 @@ function ChillHop() {
       artist: 'Arbour, G Mills',
       audio: 'https://mp3.chillhop.com/serve.php/?mp3=28967',
       color: ['#45404C', '#B5C7D3'],
-      // id: uuid(),
+      id: uuidv4(),
       active: true,
     },
     //2
@@ -18,7 +20,7 @@ function ChillHop() {
       artist: 'Kreatev',
       audio: 'https://mp3.chillhop.com/serve.php/?mp3=28973',
       color: ['#45404C', '#B5C7D3'],
-      // id: uuid(),
+      id: uuidv4(),
       active: false,
     },
     {
@@ -29,7 +31,7 @@ function ChillHop() {
       artist: 'Plusma, Guillaume Muschalle',
       audio: 'https://mp3.chillhop.com/serve.php/?mp3=28897',
       color: ['#85AFA5', '#FEFCC9'],
-      // id: uuid(),
+      id: uuidv4(),
       active: false,
     },
     {
@@ -40,7 +42,7 @@ function ChillHop() {
       artist: 'Knowmadic',
       audio: 'https://mp3.chillhop.com/serve.php/?mp3=9149',
       color: ['#B4965E', '#055C4F'],
-      // id: uuid(),
+      id: uuidv4(),
       active: false,
     },
     {
@@ -51,7 +53,7 @@ function ChillHop() {
       artist: 'Tesk',
       audio: 'https://mp3.chillhop.com/serve.php/?mp3=8137',
       color: ['#B4965E', '#055C4F'],
-      // id: uuid(),
+      id: uuidv4(),
       active: false,
     },
     {
@@ -62,7 +64,7 @@ function ChillHop() {
       artist: "j'san",
       audio: 'https://mp3.chillhop.com/serve.php/?mp3=7953',
       color: ['#D288C3', '#1AD7F5'],
-      // id: uuid(),
+      id: uuidv4(),
       active: false,
     },
   ]
