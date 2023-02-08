@@ -42,7 +42,7 @@ export const LibrarySong = (
         <h3>{song.name} </h3>
         <h4>{song.artist} </h4>
       </div> */}
-      <Image alt="name" src="cover"></Image>
+      <Image alt="name" src="/img/cover.jpg" width={100} height={100} />
       <div className="song-description">
         <h3>name</h3>
         <h4>artist</h4>

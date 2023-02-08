@@ -108,10 +108,10 @@ export const Player = () =>
           size="2x"
           icon={faAngleRight}
         /> */}
-          <span className="material-icons">skip_next</span>
+          <span className="material-icons">skip_previous</span>
           <span className="material-icons">play_arrow</span>
           <span className="material-icons">pause</span>
-          <span className="material-icons">skip_previous</span>
+          <span className="material-icons">skip_next</span>
         </div>
       </div>
     )

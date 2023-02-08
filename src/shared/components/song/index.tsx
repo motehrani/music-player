@@ -7,7 +7,7 @@ export const Song = () => {
       {/* <img alt={currentSong.name} src={currentSong.cover}></img>
       <h2>{currentSong.name} </h2>
       <h3>{currentSong.artist} </h3> */}
-      <Image alt="name" src="cover"></Image>
+      <Image alt="name" src="/img/cover.jpg" width={100} height={100} />
       <h2>name</h2>
       <h3>artist </h3>
     </div>
