@@ -8,7 +8,8 @@ import { Library } from '@src/shared/components/library'
 
 const Home = () => {
   // Ref
-  const audioRef: MutableRefObject<HTMLAudioElement | null> = useRef(null)
+  const audioRef = useRef<HTMLAudioElement | null>(null)
+  // const audioRef: MutableRefObject<HTMLAudioElement | null> = useRef(null)
   // state
   const [songs, setSongs] = useState(data())
   const [currentSong, setCurrentSong] = useState(songs[0])
@@ -36,7 +37,7 @@ const Home = () => {
   const songEndHandler = async () => {
     let currentIndex = songs.findIndex(song => song.id === currentSong.id)
     await setCurrentSong(songs[(currentIndex + 1) % songs.length])
-    if (isPlaying) audioRef.current.play()
+    if (isPlaying) audioRef.current?.play()
   }
   return (
     <div>
