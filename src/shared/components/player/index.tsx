@@ -4,6 +4,7 @@ import {
   Dispatch,
   FC,
   SetStateAction,
+  ChangeEvent,
 } from 'react'
 
 interface PlayerProps {
@@ -103,15 +104,17 @@ export const Player: FC<PlayerProps> = ({
     }
   }
 
-  const getTime = time => {
+  const getTime = (time: number) => {
     return Math.floor(time / 60) + ':' + ('0' + Math.floor(time % 60)).slice(-2)
   }
-  const dragHandler = e => {
-    audioRef.current.currentTime = e.target.value
-    setSongInfo({ ...songInfo, currentTime: e.target.value })
+  const dragHandler = (e: ChangeEvent<HTMLInputElement>) => {
+    if (audioRef.current) {
+      audioRef.current.currentTime = +e.target.value
+    }
+    setSongInfo({ ...songInfo, currentTime: +e.target.value })
   }
 
-  const skipTrackHandler = async direction => {
+  const skipTrackHandler = async (direction: 'skip-back' | 'skip-forward') => {
     let currentIndex = songs.findIndex(song => song.id === currentSong.id)
     if (direction === 'skip-forward') {
       await setCurrentSong(songs[(currentIndex + 1) % songs.length])
