@@ -1,8 +1,9 @@
-import { FC } from 'react'
+import { Dispatch, FC, SetStateAction } from 'react'
 
 interface NavProps {
   libraryStatus: boolean
-  setLibraryStatus: (open: boolean) => void
+  setLibraryStatus: Dispatch<SetStateAction<boolean>>
+  // setLibraryStatus: (open: boolean) => void
 }
 // saw the answer in:
 // https://stackoverflow.com/questions/67039650/this-express-is-not-callable-type-boolean-has-no-call-signatures
