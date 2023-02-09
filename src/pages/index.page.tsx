@@ -55,15 +55,14 @@ const Home = () => {
         setSongs={setSongs}
       />
 
-      {/* <Library
+      <Library
         songs={songs}
         setCurrentSong={setCurrentSong}
         audioRef={audioRef}
         isPlaying={isPlaying}
         setSongs={setSongs}
         libraryStatus={libraryStatus}
-      /> */}
-      <Library />
+      />
       <audio
         onTimeUpdate={timeUpdateHandler}
         onLoadedMetadata={timeUpdateHandler}
