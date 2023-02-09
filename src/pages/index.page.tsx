@@ -1,4 +1,4 @@
-import { useState, useRef, SyntheticEvent, FC } from 'react'
+import { useState, useRef, SyntheticEvent, FC, MutableRefObject } from 'react'
 
 import data from '@src/pages/data'
 import { Nav } from '@src/shared/components/nav'
@@ -8,7 +8,7 @@ import { Library } from '@src/shared/components/library'
 
 const Home = () => {
   // Ref
-  const audioRef = useRef<HTMLAudioElement | null>(null)
+  const audioRef: MutableRefObject<HTMLAudioElement | null> = useRef(null)
   // state
   const [songs, setSongs] = useState(data())
   const [currentSong, setCurrentSong] = useState(songs[0])
@@ -42,7 +42,7 @@ const Home = () => {
     <div>
       <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
       <Song currentSong={currentSong} />
-      {/* <Player
+      <Player
         isPlaying={isPlaying}
         setIsPlaying={setIsPlaying}
         currentSong={currentSong}
@@ -52,8 +52,8 @@ const Home = () => {
         setSongInfo={setSongInfo}
         songs={songs}
         setSongs={setSongs}
-      /> */}
-      <Player />
+      />
+
       {/* <Library
         songs={songs}
         setCurrentSong={setCurrentSong}
