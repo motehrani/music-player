@@ -1,4 +1,10 @@
-import { useEffect, MutableRefObject, FC } from 'react'
+import {
+  useEffect,
+  MutableRefObject,
+  Dispatch,
+  FC,
+  SetStateAction,
+} from 'react'
 
 interface PlayerProps {
   songInfo: {
@@ -6,11 +12,13 @@ interface PlayerProps {
     duration: number
     animationPercentage: number
   }
-  setSongInfo: (open: {
-    currentTime: number
-    duration: number
-    animationPercentage: number
-  }) => void
+  setSongInfo: Dispatch<
+    SetStateAction<{
+      currentTime: number
+      duration: number
+      animationPercentage: number
+    }>
+  >
   currentSong: {
     name: string
     cover: string
@@ -20,8 +28,8 @@ interface PlayerProps {
     id: string
     active: boolean
   }
-  setCurrentSong: (
-    open: {
+  setCurrentSong: Dispatch<
+    SetStateAction<{
       name: string
       cover: string
       artist: string
@@ -29,10 +37,10 @@ interface PlayerProps {
       color: string[]
       id: string
       active: boolean
-    }[],
-  ) => void
+    }>
+  >
   isPlaying: boolean
-  setIsPlaying: (open: boolean) => void
+  setIsPlaying: Dispatch<SetStateAction<boolean>>
   audioRef: MutableRefObject<HTMLAudioElement | null>
   songs: {
     name: string
@@ -43,17 +51,19 @@ interface PlayerProps {
     id: string
     active: boolean
   }[]
-  setSongs: (
-    open: {
-      name: string
-      cover: string
-      artist: string
-      audio: string
-      color: string[]
-      id: string
-      active: boolean
-    }[],
-  ) => void
+  setSongs: Dispatch<
+    SetStateAction<
+      {
+        name: string
+        cover: string
+        artist: string
+        audio: string
+        color: string[]
+        id: string
+        active: boolean
+      }[]
+    >
+  >
 }
 
 export const Player: FC<PlayerProps> = ({
