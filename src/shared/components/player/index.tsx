@@ -1,8 +1,16 @@
 import { useEffect, MutableRefObject, FC } from 'react'
 
 interface PlayerProps {
-  songInfo: boolean
-  setSongInfo: (open: boolean) => void
+  songInfo: {
+    currentTime: number
+    duration: number
+    animationPercentage: number
+  }
+  setSongInfo: (open: {
+    currentTime: number
+    duration: number
+    animationPercentage: number
+  }) => void
   currentSong: {
     name: string
     cover: string
