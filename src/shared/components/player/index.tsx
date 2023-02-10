@@ -179,7 +179,7 @@ export const Player: FC<PlayerProps> = ({
         >
           skip_previous
         </span>
-        <span className="material-icons" onClick={playSongHandler}>
+        <span className="material-icons play" onClick={playSongHandler}>
           {isPlaying ? 'pause' : 'play_arrow'}
         </span>
         <span

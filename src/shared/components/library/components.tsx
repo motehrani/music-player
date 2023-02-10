@@ -1,5 +1,7 @@
 import { FC, Dispatch, SetStateAction, MutableRefObject } from 'react'
-import Image from 'next/image'
+// import Image from 'next/image'
+// what is the error with using 'next/image' for Image
+import Image from 'antd/lib/image'
 
 interface LibrarySongProps {
   song: {
@@ -84,7 +86,7 @@ export const LibrarySong: FC<LibrarySongProps> = ({
       className={`library-song ${song.active ? 'selected' : ''}`}
     >
       {/* <img alt={song.name} src={song.cover}></img> */}
-      <Image alt={song.name} src="/img/cover.jpg" width={50} height={50} />
+      <Image alt={song.name} src={song.cover} width={50} height={50} />
       <div className="song-description">
         <h3>{song.name} </h3>
         <h4>{song.artist} </h4>
