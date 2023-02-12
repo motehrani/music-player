@@ -11,6 +11,15 @@
     img {
       border-radius: 45%;
     }
+
+    .ant-image-mask {
+      background: var(--positive-t4);
+
+      .ant-image-mask-info {
+        color: var(--opposite-t9);
+      }
+
+    }
   }
 
   h2 {
