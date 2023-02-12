@@ -6,24 +6,21 @@
 
 body {
   margin: 0;
-
-  h2 {
-    // color: var(--opposite-t9);
-    // at the end gotta make theme
-  }
+  background: var(--positive) !important;
 
   h1,
   h2,
   h3,
-  p {
-    color: rgb(54, 54, 54);
+  p,
+  span {
+    color: var(--opposite-t8);
     margin: 0;
   }
 
   h3,
   h4 {
-    font-weight: 400;
-    color: rgb(100, 100, 100);
+    font-weight: 450;
+    color: var(--opposite-t9);
   }
 
   .App {
@@ -46,7 +43,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   scrollbar-width: thin;
-  scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
+  scrollbar-color: var(--opposite-t3) transparent;
 
   ::-webkit-scrollbar {
     width: 5px;
@@ -57,7 +54,7 @@ body {
   }
 
   -webkit-scrollbar-thumb {
-    background-color: rgba(155, 155, 155, 0.5);
+    background-color: var(--opposite-t3);
     border-radius: 20px;
     border: transparent;
   }
@@ -86,21 +83,22 @@ img {
   /* Your default theme */
   --background: #ffffff;
   --foreground: rgb(15, 12, 8);
-  --main: #9880fa;
-  --hover-main: #a58fff;
+  --main: rgb(113, 61, 0);
+  --hover-main: rgba(210, 112, 0, 0.439);
   --input: rgb(232, 232, 232);
   --input-color: rgb(66, 66, 66);
-  --main-t1: rgba(152, 128, 250, 0.1);
-  --main-t2: rgba(152, 128, 250, 0.2);
-  --main-t3: rgba(152, 128, 250, 0.3);
-  --main-t4: rgba(152, 128, 250, 0.4);
-  --main-t5: rgba(152, 128, 250, 0.5);
-  --main-t6: rgba(152, 128, 250, 0.6);
-  --main-t7: rgba(152, 128, 250, 0.7);
-  --main-t8: rgba(152, 128, 250, 0.8);
-  --main-t9: rgba(152, 128, 250, 0.9);
+  --main-t1: rgba(113, 61, 0, 0.1);
+  --main-t2: rgba(113, 61, 0, 0.2);
+  --main-t3: rgba(113, 61, 0, 0.3);
+  --main-t4: rgba(113, 61, 0, 0.4);
+  --main-t5: rgba(113, 61, 0, 0.5);
+  --main-t6: rgba(113, 61, 0, 0.6);
+  --main-t7: rgba(113, 61, 0, 0.7);
+  --main-t8: rgba(113, 61, 0, 0.8);
+  --main-t9: rgba(113, 61, 0, 0.9);
   --positive-t05: rgba(255, 255, 255, 0.05);
   --positive-t1: rgba(255, 255, 255, 0.1);
+  --positive-t15: rgba(255, 255, 255, 0.15);
   --positive-t2: rgba(255, 255, 255, 0.2);
   --positive-t3: rgba(255, 255, 255, 0.3);
   --positive-t4: rgba(255, 255, 255, 0.4);
@@ -112,6 +110,7 @@ img {
   --positive: white;
   --opposite-t05: rgba(0, 0, 0, 0.05);
   --opposite-t1: rgba(0, 0, 0, 0.1);
+  --opposite-t15: rgba(0, 0, 0, 0.15);
   --opposite-t2: rgba(0, 0, 0, 0.2);
   --opposite-t3: rgba(0, 0, 0, 0.3);
   --opposite-t4: rgba(0, 0, 0, 0.4);
@@ -126,21 +125,22 @@ img {
 [data-theme='dark'] {
   --background: rgb(10, 10, 15);
   --foreground: rgb(232, 232, 232);
-  --main: #7556fc;
-  --hover-main: #5c33ff;
+  --main: rgb(113, 61, 0);
+  --hover-main: #422300;
   --input: rgb(66, 66, 66);
   --input-color: rgb(232, 232, 232);
-  --main-t1: rgba(117, 86, 252, 0.1);
-  --main-t2: rgba(117, 86, 252, 0.2);
-  --main-t3: rgba(117, 86, 252, 0.3);
-  --main-t4: rgba(117, 86, 252, 0.4);
-  --main-t5: rgba(117, 86, 252, 0.5);
-  --main-t6: rgba(117, 86, 252, 0.6);
-  --main-t7: rgba(117, 86, 252, 0.7);
-  --main-t8: rgba(117, 86, 252, 0.8);
-  --main-t9: rgba(117, 86, 252, 0.9);
+  --main-t1: rgba(113, 61, 0, 0.1);
+  --main-t2: rgba(113, 61, 0, 0.2);
+  --main-t3: rgba(113, 61, 0, 0.3);
+  --main-t4: rgba(113, 61, 0, 0.4);
+  --main-t5: rgba(113, 61, 0, 0.5);
+  --main-t6: rgba(113, 61, 0, 0.6);
+  --main-t7: rgba(113, 61, 0, 0.7);
+  --main-t8: rgba(113, 61, 0, 0.8);
+  --main-t9: rgba(113, 61, 0, 0.9);
   --positive-t05: rgba(0, 0, 0, 0.05);
   --positive-t1: rgba(0, 0, 0, 0.1);
+  --positive-t15: rgba(0, 0, 0, 0.15);
   --positive-t2: rgba(0, 0, 0, 0.2);
   --positive-t3: rgba(0, 0, 0, 0.3);
   --positive-t4: rgba(0, 0, 0, 0.4);
@@ -152,6 +152,7 @@ img {
   --positive: black;
   --opposite-t05: rgba(255, 255, 255, 0.05);
   --opposite-t1: rgba(255, 255, 255, 0.1);
+  --opposite-t15: rgba(255, 255, 255, 0.15);
   --opposite-t2: rgba(255, 255, 255, 0.2);
   --opposite-t3: rgba(255, 255, 255, 0.3);
   --opposite-t4: rgba(255, 255, 255, 0.4);

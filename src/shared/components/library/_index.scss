@@ -4,8 +4,8 @@
   left: 0;
   width: 20rem;
   height: 100%;
-  background: white;
-  box-shadow: 2px 2px 50px rgb(204, 204, 204);
+  background: var(--positive);
+  box-shadow: 2px 2px 50px var(--opposite-t15);
   overflow: scroll;
   transform: translateX(-100%);
   transition: all 0.5s ease;
@@ -19,9 +19,7 @@
     padding: 2rem;
   }
 
-  .selected {
-    background: #cec8fc;
-  }
+
 
   .library-song {
     display: flex;
@@ -36,7 +34,7 @@
     }
 
     &:hover {
-      background: rgb(203, 214, 228);
+      background: var(--hover-main);
     }
 
     .song-description {
@@ -49,6 +47,15 @@
       h4 {
         font-size: 0.7rem;
       }
+    }
+  }
+
+  .selected {
+    background: var(--main);
+
+    h4,
+    h3 {
+      color: rgba(255, 255, 255, 0.8);
     }
   }
 }

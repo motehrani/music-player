@@ -4,26 +4,38 @@ nav {
   justify-content: space-around;
   align-items: center;
 
+  h1 {
+    font-size: 180%;
+  }
+
+  .wave {
+    display: flex;
+  }
+
   button {
     display: flex !important;
-    background: transparent;
+    background: var(--positive) transparent !important;
     border: none;
     cursor: pointer;
-    border: 2px solid rgb(65, 65, 65) !important;
+    border: 2px solid var(--opposite-t8) !important;
     padding: 0.5rem;
     transition: all 0.3s ease;
 
     &:hover {
-      background: rgb(65, 65, 65) !important;
-      color: white !important;
+      background: var(--opposite) !important;
 
+      span,
       h2 {
-        color: white;
+        color: var(--positive);
       }
     }
 
     h2 {
       font-size: 18px;
+      transition: all 0.3s ease;
+    }
+
+    span {
       transition: all 0.3s ease;
     }
 
