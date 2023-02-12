@@ -6,6 +6,7 @@ nav {
 
   h1 {
     font-size: 180%;
+    padding-right: 20px;
   }
 
   .wave {
@@ -15,9 +16,8 @@ nav {
   button {
     display: flex !important;
     background: var(--positive) transparent !important;
-    border: none;
+    border: none !important;
     cursor: pointer;
-    border: 2px solid var(--opposite-t8) !important;
     padding: 0.5rem;
     transition: all 0.3s ease;
 
@@ -38,7 +38,6 @@ nav {
     span {
       transition: all 0.3s ease;
     }
-
   }
 }
 
