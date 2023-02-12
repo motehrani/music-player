@@ -8,7 +8,58 @@ body {
   margin: 0;
 
   h2 {
-    color: var(--opposite-t9);
+    // color: var(--opposite-t9);
+    // at the end gotta make theme
+  }
+
+  h1,
+  h2,
+  h3,
+  p {
+    color: rgb(54, 54, 54);
+    margin: 0;
+  }
+
+  h3,
+  h4 {
+    font-weight: 400;
+    color: rgb(100, 100, 100);
+  }
+
+  .App {
+    transition: all 0.5s ease;
+  }
+
+  .library-active {
+    margin-left: 30%;
+  }
+
+  .ant-btn:hover,
+  .ant-btn:focus {
+    color: black;
+  }
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  -webkit-scrollbar-thumb {
+    background-color: rgba(155, 155, 155, 0.5);
+    border-radius: 20px;
+    border: transparent;
   }
 }
 

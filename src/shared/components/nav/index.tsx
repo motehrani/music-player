@@ -15,7 +15,7 @@ export const Nav: FC<NavProps> = ({ libraryStatus, setLibraryStatus }) => {
     <nav>
       <h1>Waves</h1>
       <Button onClick={() => setLibraryStatus(!libraryStatus)}>
-        Library
+        <h2>Library</h2>
         <span className="material-icons">music_note</span>
       </Button>
     </nav>

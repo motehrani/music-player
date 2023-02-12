@@ -40,7 +40,7 @@ const Home = () => {
     if (isPlaying) audioRef.current?.play()
   }
   return (
-    <div>
+    <div className={`App ${libraryStatus ? 'library-active' : ''}`}>
       <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
       <Song currentSong={currentSong} />
       <Player

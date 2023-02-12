@@ -11,70 +11,49 @@
   transition: all 0.5s ease;
   opacity: 0;
 
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+
   h2 {
     padding: 2rem;
   }
-}
 
-.library-song {
-  display: flex;
-  align-items: center;
-  padding: 1rem 2rem 1rem 2rem;
-  cursor: pointer;
-  transition: background 0.5s ease;
-
-  img {
-    width: 30%;
-    border-radius: 0%;
+  .selected {
+    background: #cec8fc;
   }
 
-  &:hover {
-    background: rgb(203, 214, 228);
+  .library-song {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem 1rem 2rem;
+    cursor: pointer;
+    transition: background 0.5s ease;
+    width: 100%;
+
+    .ant-image {
+      width: 30%;
+    }
+
+    &:hover {
+      background: rgb(203, 214, 228);
+    }
+
+    .song-description {
+      padding-left: 1rem;
+
+      h3 {
+        font-size: 1rem;
+      }
+
+      h4 {
+        font-size: 0.7rem;
+      }
+    }
   }
-}
-
-.song-description {
-  padding-left: 1rem;
-
-  h3 {
-    font-size: 1rem;
-  }
-
-  h4 {
-    font-size: 0.7rem;
-  }
-}
-
-* {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
-}
-
-*::-webkit-scrollbar {
-  width: 5px;
-}
-
-*::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: rgba(155, 155, 155, 0.5);
-  border-radius: 20px;
-  border: transparent;
-}
-
-.selected {
-  background: #cec8fc;
 }
 
 .active-library {
   transform: translateX(0%);
   opacity: 1;
-}
-
-@media screen and (max-width: 768px) {
-  .library {
-    width: 100%;
-  }
 }

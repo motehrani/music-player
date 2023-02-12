@@ -86,7 +86,7 @@ export const LibrarySong: FC<LibrarySongProps> = ({
       className={`library-song ${song.active ? 'selected' : ''}`}
     >
       {/* <img alt={song.name} src={song.cover}></img> */}
-      <Image alt={song.name} src={song.cover} width={50} height={50} />
+      <Image alt={song.name} src={song.cover} />
       <div className="song-description">
         <h3>{song.name} </h3>
         <h4>{song.artist} </h4>

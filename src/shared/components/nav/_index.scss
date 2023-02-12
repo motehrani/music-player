@@ -5,16 +5,26 @@ nav {
   align-items: center;
 
   button {
+    display: flex !important;
     background: transparent;
     border: none;
     cursor: pointer;
-    border: 2px solid rgb(65, 65, 65); // why he write border two times and different
+    border: 2px solid rgb(65, 65, 65) !important;
     padding: 0.5rem;
     transition: all 0.3s ease;
 
     &:hover {
-      background: rgb(65, 65, 65);
-      color: white;
+      background: rgb(65, 65, 65) !important;
+      color: white !important;
+
+      h2 {
+        color: white;
+      }
+    }
+
+    h2 {
+      font-size: 18px;
+      transition: all 0.3s ease;
     }
 
   }

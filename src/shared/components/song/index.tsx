@@ -20,8 +20,6 @@ export const Song: FC<SongProps> = ({ currentSong }) => {
         alt={currentSong.name}
         src={currentSong.cover}
         // src="/img/cover.jpg"
-        width={100}
-        height={100}
       />
       <h2>{currentSong.name}</h2>
       <h3>{currentSong.artist}</h3>
